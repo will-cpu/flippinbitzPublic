@@ -1,0 +1,31 @@
+<mat-toolbar color="primary">
+  <span>
+    <a routerLink="/">FlippinBitz</a>
+  </span>
+  <span class="spacer"></span>
+</mat-toolbar>
+  <mat-toolbar color="accent">
+  <ul>
+    <li>
+      <a mat-button routerLink="/SubSetCalc" routerLinkActive="mat-primary">SubSet Calculator</a>
+    </li>
+    <li>
+      <a mat-button routerLink="/SubSetHist" routerLinkActive="mat-primary">SubSet History</a>
+    </li>
+    <li>
+      <a mat-button routerLink="/Posts" routerLinkActive="mat-primary">Post</a>
+    </li>
+    <li *ngIf="userIsAuthenticated">
+      <a mat-button routerLink="/create" routerLinkActive="mat-primary">New Post</a>
+    </li>
+    <li *ngIf="!userIsAuthenticated">
+      <a mat-button routerLink="/login" routerLinkActive="mat-primary">Login</a>
+    </li>
+    <li *ngIf="userIsAuthenticated">
+      <a mat-button routerLink="/signup" routerLinkActive="mat-primary">Signup</a>
+    </li>
+    <li *ngIf="userIsAuthenticated">
+      <button mat-button (click)="onLogout()">Logout</button>
+    </li>
+  </ul>
+</mat-toolbar>

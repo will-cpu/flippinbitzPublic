@@ -1,0 +1,24 @@
+:host {
+  display: block;
+  margin-top: 1rem;
+}
+
+.info-text {
+  text-align: center;
+}
+
+p {
+  word-break: break-all;
+  white-space: normal;
+  text-align: center;
+}
+
+mat-card {
+  width: 70%;
+  margin: auto;
+  margin-top: 1rem;
+}
+
+mat-card-content {
+  margin-top: 1rem;
+}

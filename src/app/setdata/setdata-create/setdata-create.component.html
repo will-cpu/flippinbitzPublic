@@ -1,0 +1,26 @@
+<p>This calculator will find a subset equal to your choosing in polynomial time.
+    It only works for sets with unquie values. Enjoy!</p>
+<mat-card>
+    <form [formGroup]="form" (submit)="onAddSetdata()">
+        <mat-form-field>
+          <textarea
+            matInput
+            rows="6"
+            formControlName="data"
+            placeholder="Example Set: 3 6 2 4 9 8"></textarea>
+            <mat-error *ngIf="form.get('data').invalid">Invalid Input</mat-error>
+        </mat-form-field>
+        <mat-form-field>
+            <input
+              matInput
+              formControlName="search"
+              placeholder="Subset that equals...">
+              <mat-error *ngIf="form.get('search').invalid">Invalid Input</mat-error>
+          </mat-form-field>
+        <button
+          mat-raised-button
+          color="accent"
+          type="submit">Calculate Subset</button>
+        <p>{{ answer }}</p>
+    </form>
+</mat-card>
